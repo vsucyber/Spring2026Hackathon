@@ -63,22 +63,20 @@ nav a:hover{
 
 h2{color:var(--vsu-orange)}
 
-.logo-container{
+ .logo-container {
   display:flex;
   justify-content:center;
   align-items:center;
   gap:30px;
   margin-top:20px;
-  height: 80px;
-  width: auto;
-  object-fit: contain;
 }
 
-.logo-container img{
-  width:90px;
-  height:auto;
+.logo-container img {
+  height:80px;      /* consistent visual size */
+  width:auto;       /* preserve aspect ratio */
+  object-fit:contain;
 }
-
+  
 .box-container{
   display:flex;
   justify-content:center;
