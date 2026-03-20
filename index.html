@@ -70,26 +70,10 @@ h2{color:var(--vsu-orange)}
   margin-top:20px;
 }
 
-/* 🔑 Robust fix */
-.logo-box{
-  height:80px;
-  width:140px;              /* gives horizontal room */
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.logo-container img{
+  width:90px;
+  height:auto;
 }
-
-.logo-box img{
-  max-height:100%;
-  max-width:100%;
-  object-fit:contain;       /* prevents cropping */
-}
-
-/* Optional fine-tune if needed */
-.logo-box img[alt="Brightpoint Logo"]{
-  transform:scale(1.1);
-}
-
 .box-container{
   display:flex;
   justify-content:center;
@@ -97,7 +81,7 @@ h2{color:var(--vsu-orange)}
   margin-top:20px;
   flex-wrap:wrap;
 }
-
+  
 .box{
   background-color:var(--vsu-light-orange);
   padding:20px;
@@ -138,15 +122,9 @@ footer{
 <p>Collaborative Hackathon Hosted by Virginia Institutions</p>
 
 <div class="logo-container">
-  <div class="logo-box">
-    <img src="vsu.jfif" alt="VSU Logo">
-  </div>
-  <div class="logo-box">
-    <img src="nova.jfif" alt="NOVA Logo">
-  </div>
-  <div class="logo-box">
-    <img src="brightpoint.jfif" alt="Brightpoint Logo">
-  </div>
+  <img src="vsu.jfif" alt="VSU Logo">
+  <img src="nova.jfif" alt="NOVA Logo">
+  <img src="brightpoint.jfif" alt="Brightpoint Logo">
 </div>
 
 <p>Virginia State University • Northern Virginia Community College • Brightpoint Community College</p>
