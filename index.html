@@ -60,10 +60,9 @@ nav a:hover{
 }
 
 .section{margin-bottom:40px}
-
 h2{color:var(--vsu-orange)}
 
- .logo-container {
+.logo-container{
   display:flex;
   justify-content:center;
   align-items:center;
@@ -71,12 +70,26 @@ h2{color:var(--vsu-orange)}
   margin-top:20px;
 }
 
-.logo-container img {
-  height:80px;      /* consistent visual size */
-  width:auto;       /* preserve aspect ratio */
-  object-fit:contain;
+/* 🔑 Robust fix */
+.logo-box{
+  height:80px;
+  width:140px;              /* gives horizontal room */
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-  
+
+.logo-box img{
+  max-height:100%;
+  max-width:100%;
+  object-fit:contain;       /* prevents cropping */
+}
+
+/* Optional fine-tune if needed */
+.logo-box img[alt="Brightpoint Logo"]{
+  transform:scale(1.1);
+}
+
 .box-container{
   display:flex;
   justify-content:center;
@@ -116,7 +129,6 @@ footer{
   color:var(--vsu-white);
 }
 </style>
-
 </head>
 
 <body>
@@ -126,13 +138,18 @@ footer{
 <p>Collaborative Hackathon Hosted by Virginia Institutions</p>
 
 <div class="logo-container">
-<img src="vsu-logo.jfif" alt="VSU Logo">
-<img src="nova.jfif" alt="NOVA Logo">
-<img src="brightpoint.jfif" alt="Brightpoint Logo">
+  <div class="logo-box">
+    <img src="vsu-logo.jfif" alt="VSU Logo">
+  </div>
+  <div class="logo-box">
+    <img src="nova.jfif" alt="NOVA Logo">
+  </div>
+  <div class="logo-box">
+    <img src="brightpoint.jfif" alt="Brightpoint Logo">
+  </div>
 </div>
 
 <p>Virginia State University • Northern Virginia Community College • Brightpoint Community College</p>
-
 </header>
 
 <nav>
@@ -160,11 +177,9 @@ Register Here
 <h2>Challenges</h2>
 
 <p><strong>Hackathon challenges will be unveiled on:</strong></p>
-
 <p style="font-size:1.2rem;"><strong>April 2</strong></p>
 
 <p>Teams will receive the challenge description and begin developing their solutions.</p>
-
 </div>
 
 </div>
@@ -182,55 +197,42 @@ This collaborative hackathon brings together students from
 <p>
 Participants will work in teams to analyze problems, design solutions, and present their ideas. The event emphasizes innovation through Artificial Intelligence and fosters advanced technical creativity.
 </p>
-
-
 </section>
 
 <section id="objectives" class="section">
 <h2>Objectives</h2>
-
 <ul>
 <li>Encourage collaboration across Virginia institutions</li>
 <li>Promote problem solving and innovative technical thinking using Artificial Intelligence</li>
 <li>Develop practical design, testing, and presentation skills</li>
 <li>Provide students with real-world project experience</li>
 </ul>
-
 </section>
 
 <section id="why-participate" class="section">
 <h2>Why Participate?</h2>
-
 <p>
 Gain hands-on experience solving real-world challenges through the use of AI, collaborate with students from other colleges, and build practical technical skills while competing for prizes and recognition.
 </p>
-
 </section>
 
 <section id="schedule" class="section">
-
 <h2>Event Schedule</h2>
-
 <ul>
 <li><strong>April 2:</strong> Hackathon challenges released</li>
 <li><strong>April 2 – April 5:</strong> Teams work on solutions</li>
 <li><strong>April 5 – 6:00 PM:</strong> Solutions Submission</li>
 <li><strong>April 6 — 3:00 PM:</strong> Solution Presentations</li>
 </ul>
-
 </section>
 
 <section id="contact" class="section">
-
 <h2>Contact</h2>
-
 <p>If you have any questions, please reach out.</p>
-
 <p>
 <strong>Email:</strong>
 <a href="mailto:mrais@vsu.edu">mrais@vsu.edu</a>
 </p>
-
 </section>
 
 </div>
