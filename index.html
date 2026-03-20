@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Virginia Intercollegiate Hackathon 2025</title>
+<title>Virginia Intercollegiate Hackathon Spring 2026</title>
 
 <style>
 :root {
@@ -65,14 +65,30 @@ h2{color:var(--vsu-orange)}
 .logo-container{
   display:flex;
   justify-content:center;
-  align-items:center;
-  gap:30px;
+  align-items:flex-start;
+  gap:40px;
   margin-top:20px;
+  flex-wrap:wrap;
 }
 
-.logo-container img{
-  width:90px;
-  height:auto;
+.logo-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:160px; /* controls text wrapping */
+  text-align:center;
+}
+
+.logo-item img{
+  height:80px;     /* equal height */
+  width:auto;      /* flexible width */
+  object-fit:contain;
+}
+
+.logo-item p{
+  margin-top:8px;
+  font-size:0.9rem;
+  color:var(--vsu-white);
 }
 .box-container{
   display:flex;
@@ -122,12 +138,23 @@ footer{
 <p>Collaborative Hackathon Hosted by Virginia Institutions</p>
 
 <div class="logo-container">
-  <img src="vsu.jfif" alt="VSU Logo">
-  <img src="nova.jfif" alt="NOVA Logo">
-  <img src="brightpoint.jfif" alt="Brightpoint Logo">
-</div>
 
-<p>Virginia State University • Northern Virginia Community College • Brightpoint Community College</p>
+  <div class="logo-item">
+    <img src="vsu.jfif" alt="VSU Logo">
+    <p>Virginia State University</p>
+  </div>
+
+  <div class="logo-item">
+    <img src="nova.jfif" alt="NOVA Logo">
+    <p>Northern Virginia Community College</p>
+  </div>
+
+  <div class="logo-item">
+    <img src="brightpoint.jfif" alt="Brightpoint Logo">
+    <p>Brightpoint Community College</p>
+  </div>
+
+</div>
 </header>
 
 <nav>
